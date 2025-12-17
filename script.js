@@ -8,7 +8,7 @@ function getoutput() {
     return document.getElementById("output-value").innerText;
 }
 function printoutput(number) {
-    if (num == "") {
+    if (number == "") {
          document.getElementById("output-value").innerText=number
     }
     else {
@@ -55,7 +55,7 @@ for (var i = 0; i < operator.length; i++) {
                     output : reverseformat(output);
                 history = history + output;
                 if (this.id == "=") {
-                    result = eval(history);
+                     var result = eval(history);
                     printoutput(result);
                     printhistory("");
 
@@ -71,7 +71,7 @@ for (var i = 0; i < operator.length; i++) {
 
 }
 var number=document.getElementsByClassName("number");
-for(vari=0;i<number.length;i++){
+for(var i=0;i<number.length;i++){
     number[i].addEventListener("click",function(){
         var output=reverseformat(getoutput());
         if(output!=NaN){
